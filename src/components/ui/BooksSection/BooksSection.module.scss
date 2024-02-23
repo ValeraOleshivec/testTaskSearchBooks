@@ -1,0 +1,17 @@
+.booksSection {
+  display: grid;
+  width: 70vw;
+  min-height: 30vh;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, auto);
+  margin: 40px auto 0 ;
+  grid-row-gap: 40px;
+  @media (max-width: 1350px) {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    grid-column-gap: 40px;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(1, auto);
+  }
+}
