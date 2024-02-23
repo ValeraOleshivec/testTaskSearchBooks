@@ -1,0 +1,38 @@
+.book{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 30px;
+  background-color: #fff;
+  justify-content: center;
+  padding: 30px 20px 5px;
+  .imageBlock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .image {
+      display: flex;
+      width: 200px;
+      height: 280px;
+      position: relative;
+      object-fit: cover
+    }
+  }
+  .textSection{
+  height: 100%;
+    .category{
+      color:gray;
+      margin-top: 15px;
+    }
+    .title{
+      margin-top: 15px;
+      color:black;
+      font-size: 1.5rem;
+    }
+    .authors{
+      display: flex;
+    }
+  }
+}
