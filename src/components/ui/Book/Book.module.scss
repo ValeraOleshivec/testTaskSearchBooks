@@ -8,6 +8,8 @@
   background-color: #fff;
   justify-content: center;
   padding: 30px 20px 5px;
+  opacity: 0;
+  animation:  ani 0.5s forwards;;
   .imageBlock{
     width: 100%;
     display: flex;
@@ -35,4 +37,8 @@
       display: flex;
     }
   }
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
