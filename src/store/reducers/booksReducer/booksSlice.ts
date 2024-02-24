@@ -9,6 +9,7 @@ const initialState: BooksSchema = {
   searchInput: "",
   category: "all",
   sort: "relevance",
+  booksIndex: 0,
 };
 
 export const booksSlice = createSlice({
@@ -25,8 +26,17 @@ export const booksSlice = createSlice({
       state.sort = action.payload;
     },
     setBooks: (state, action) => {
-      console.log(action.payload);
       state.books = action.payload;
+    },
+    setMoreBooks: (state, action) => {
+      state.books = [...state.books, ...action.payload];
+    },
+    setIndex: (state, action) => {
+      if (action.payload === 0) {
+        state.booksIndex = 0;
+        return;
+      }
+      state.booksIndex += action.payload;
     },
   },
   extraReducers: (builder) => {

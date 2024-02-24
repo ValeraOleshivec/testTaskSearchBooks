@@ -11,7 +11,7 @@ interface BookProps {
 
 export const Book = (props: BookProps) => {
   const { title, category, authors, image } = props;
-  const slicedTitle = title.length > 45 ? `${title.slice(0, 40)}...` : title;
+  const slicedTitle = title?.length > 45 ? `${title.slice(0, 40)}...` : title;
   const authorsLength = authors?.length - 1;
   const authorText = authors?.join(", ");
   return (
